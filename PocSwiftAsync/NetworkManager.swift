@@ -27,7 +27,7 @@ class NetworkManager {
         case .success(let response):
             return response.error ? "Error Ocurred" : response.text
         case .failure(_):
-            return "Failed: Could not retrieve response!"
+            return "Failed: Could not retrieve response!!!"
         }
     }
 }
