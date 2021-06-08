@@ -15,10 +15,9 @@ struct BogusResponse : Decodable {
 class AsyncHttpClient {
     
     func makeCall(request: URLRequest) async -> Result<BogusResponse, Error> {
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        
         do {
-            let (data, _) = try await session.data(for: request, delegate: nil)
+            let (data, _) = try await URLSession.shared.data(for: request, delegate: nil)
+            await delayCall()
             return .success(try JSONDecoder().decode(BogusResponse.self, from: data))
         } catch {
             return .failure(error)

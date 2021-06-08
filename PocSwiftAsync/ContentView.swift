@@ -49,9 +49,8 @@ fileprivate struct ButtonList: View {
             Button("Network Error") {
                 loadData(with: .error)
             }
-            Button("Network Failed") {
-                loadData(with: .failed)
-            }
+        }.refreshable {
+            loadData(with: .failed)
         }
     }
     
@@ -69,3 +68,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+//https://github.com/apple/swift/blob/main/stdlib/public/Concurrency/SourceCompatibilityShims.swift

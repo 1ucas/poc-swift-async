@@ -14,6 +14,7 @@
 		C13EE219266FA56400943301 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13EE218266FA56400943301 /* NetworkManager.swift */; };
 		C13EE21B266FA5A300943301 /* AsyncHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13EE21A266FA5A300943301 /* AsyncHttpClient.swift */; };
 		C13EE21D266FB96200943301 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13EE21C266FB96200943301 /* RequestBuilder.swift */; };
+		C1D47D8F267022F2002F089F /* AsyncUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D47D8E267022F2002F089F /* AsyncUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C13EE218266FA56400943301 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C13EE21A266FA5A300943301 /* AsyncHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHttpClient.swift; sourceTree = "<group>"; };
 		C13EE21C266FB96200943301 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		C1D47D8E267022F2002F089F /* AsyncUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		C13EE209266FA4DC00943301 /* PocSwiftAsync */ = {
 			isa = PBXGroup;
 			children = (
+				C1D47D9026702378002F089F /* Helpers */,
 				C123B6C3266FEEFE00184D88 /* Info.plist */,
 				C13EE20A266FA4DC00943301 /* PocSwiftAsyncApp.swift */,
 				C13EE20C266FA4DC00943301 /* ContentView.swift */,
@@ -65,7 +68,6 @@
 				C13EE210266FA4DD00943301 /* Preview Content */,
 				C13EE218266FA56400943301 /* NetworkManager.swift */,
 				C13EE21A266FA5A300943301 /* AsyncHttpClient.swift */,
-				C13EE21C266FB96200943301 /* RequestBuilder.swift */,
 			);
 			path = PocSwiftAsync;
 			sourceTree = "<group>";
@@ -76,6 +78,15 @@
 				C13EE211266FA4DD00943301 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C1D47D9026702378002F089F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C13EE21C266FB96200943301 /* RequestBuilder.swift */,
+				C1D47D8E267022F2002F089F /* AsyncUtils.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				C13EE219266FA56400943301 /* NetworkManager.swift in Sources */,
 				C13EE21B266FA5A300943301 /* AsyncHttpClient.swift in Sources */,
 				C13EE20D266FA4DC00943301 /* ContentView.swift in Sources */,
+				C1D47D8F267022F2002F089F /* AsyncUtils.swift in Sources */,
 				C13EE20B266FA4DC00943301 /* PocSwiftAsyncApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
