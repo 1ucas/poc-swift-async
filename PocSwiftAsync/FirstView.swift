@@ -7,22 +7,24 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FirstView: View {
     
-    @State var title = "Hello Porto"
+    @State var textToDisplay = "Hello Porto!"
     @State var isLoading = false
     
     var body: some View {
         VStack {
-            ReloadableText(title: $title, isLoading: $isLoading)
-            ButtonList(title: $title, isLoading: $isLoading)
+            ReloadableText(textToDisplay: $textToDisplay, isLoading: $isLoading)
+            ButtonList(textToDisplay: $textToDisplay, isLoading: $isLoading)
+            Spacer()
+            StandaloneView()
         }
     }
 }
 
 fileprivate struct ReloadableText: View {
     
-    @Binding var title: String
+    @Binding var textToDisplay: String
     @Binding var isLoading: Bool
     
     var body: some View {
@@ -30,7 +32,7 @@ fileprivate struct ReloadableText: View {
             ProgressView()
                 .padding()
         } else {
-            Text(title)
+            Text(textToDisplay)
                 .padding()
         }
     }
@@ -38,7 +40,7 @@ fileprivate struct ReloadableText: View {
 
 fileprivate struct ButtonList: View {
     
-    @Binding var title: String
+    @Binding var textToDisplay: String
     @Binding var isLoading: Bool
     
     var body: some View {
@@ -57,15 +59,31 @@ fileprivate struct ButtonList: View {
     private func loadData(with driver: CustomNetworkResult) {
         isLoading = true
         async {
-            self.title = await NetworkManager().retrieveStatus(with: driver)
+            self.textToDisplay = await NetworkManager().retrieveStatus(with: driver)
             isLoading = false
+        }
+    }
+}
+
+fileprivate struct StandaloneView: View {
+    
+    var body: some View {
+        NavigationView {
+            VStack(alignment: .center) {
+                Text("Nova View Independente")
+                    .padding()
+                Spacer()
+                NavigationLink(destination: SecondView()) {
+                    Text("Clique Aqui")
+                }.padding()
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        FirstView()
     }
 }
 

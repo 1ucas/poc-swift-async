@@ -8,26 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		C13EE20B266FA4DC00943301 /* PocSwiftAsyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13EE20A266FA4DC00943301 /* PocSwiftAsyncApp.swift */; };
-		C13EE20D266FA4DC00943301 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13EE20C266FA4DC00943301 /* ContentView.swift */; };
+		C13EE20D266FA4DC00943301 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13EE20C266FA4DC00943301 /* FirstView.swift */; };
 		C13EE20F266FA4DD00943301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13EE20E266FA4DD00943301 /* Assets.xcassets */; };
 		C13EE212266FA4DD00943301 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13EE211266FA4DD00943301 /* Preview Assets.xcassets */; };
 		C13EE219266FA56400943301 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13EE218266FA56400943301 /* NetworkManager.swift */; };
 		C13EE21B266FA5A300943301 /* AsyncHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13EE21A266FA5A300943301 /* AsyncHttpClient.swift */; };
 		C13EE21D266FB96200943301 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13EE21C266FB96200943301 /* RequestBuilder.swift */; };
 		C1D47D8F267022F2002F089F /* AsyncUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D47D8E267022F2002F089F /* AsyncUtils.swift */; };
+		C1F38650267125E2006864A4 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F3864F267125E2006864A4 /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C123B6C3266FEEFE00184D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C13EE207266FA4DC00943301 /* PocSwiftAsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocSwiftAsync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13EE20A266FA4DC00943301 /* PocSwiftAsyncApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocSwiftAsyncApp.swift; sourceTree = "<group>"; };
-		C13EE20C266FA4DC00943301 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C13EE20C266FA4DC00943301 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		C13EE20E266FA4DD00943301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C13EE211266FA4DD00943301 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C13EE218266FA56400943301 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C13EE21A266FA5A300943301 /* AsyncHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHttpClient.swift; sourceTree = "<group>"; };
 		C13EE21C266FB96200943301 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		C1D47D8E267022F2002F089F /* AsyncUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncUtils.swift; sourceTree = "<group>"; };
+		C1F3864F267125E2006864A4 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +65,12 @@
 				C1D47D9026702378002F089F /* Helpers */,
 				C123B6C3266FEEFE00184D88 /* Info.plist */,
 				C13EE20A266FA4DC00943301 /* PocSwiftAsyncApp.swift */,
-				C13EE20C266FA4DC00943301 /* ContentView.swift */,
-				C13EE20E266FA4DD00943301 /* Assets.xcassets */,
-				C13EE210266FA4DD00943301 /* Preview Content */,
+				C13EE20C266FA4DC00943301 /* FirstView.swift */,
+				C1F3864F267125E2006864A4 /* SecondView.swift */,
 				C13EE218266FA56400943301 /* NetworkManager.swift */,
 				C13EE21A266FA5A300943301 /* AsyncHttpClient.swift */,
+				C13EE20E266FA4DD00943301 /* Assets.xcassets */,
+				C13EE210266FA4DD00943301 /* Preview Content */,
 			);
 			path = PocSwiftAsync;
 			sourceTree = "<group>";
@@ -159,10 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F38650267125E2006864A4 /* SecondView.swift in Sources */,
 				C13EE21D266FB96200943301 /* RequestBuilder.swift in Sources */,
 				C13EE219266FA56400943301 /* NetworkManager.swift in Sources */,
 				C13EE21B266FA5A300943301 /* AsyncHttpClient.swift in Sources */,
-				C13EE20D266FA4DC00943301 /* ContentView.swift in Sources */,
+				C13EE20D266FA4DC00943301 /* FirstView.swift in Sources */,
 				C1D47D8F267022F2002F089F /* AsyncUtils.swift in Sources */,
 				C13EE20B266FA4DC00943301 /* PocSwiftAsyncApp.swift in Sources */,
 			);

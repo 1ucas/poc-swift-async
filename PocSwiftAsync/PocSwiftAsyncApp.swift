@@ -11,7 +11,7 @@ import SwiftUI
 struct PocSwiftAsyncApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FirstView()
         }
     }
 }

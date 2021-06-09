@@ -16,6 +16,7 @@ enum CustomNetworkResult {
 class NetworkManager {
     
     func retrieveStatus(with driver: CustomNetworkResult) async -> String {
+        
         let request = RequestBuilder.makeRequest(with: driver)
         let result = await AsyncHttpClient().makeCall(request: request)
         
@@ -25,7 +26,7 @@ class NetworkManager {
     private func handleResult(_ result: Result<BogusResponse, Error>) -> String {
         switch result {
         case .success(let response):
-            return response.error ? "Error Ocurred" : response.text
+            return response.error ? "An error occurred." : response.text
         case .failure(_):
             return "Failed: Could not retrieve response!!!"
         }
