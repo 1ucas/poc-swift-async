@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FirstView: View {
     
-    @State var textToDisplay = "Hello Porto!"
+    @State var textToDisplay = "Hello People!"
     @State var isLoading = false
     
     var body: some View {
