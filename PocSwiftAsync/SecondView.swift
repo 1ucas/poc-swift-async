@@ -9,19 +9,20 @@ import SwiftUI
 
 struct SecondView: View {
     var body: some View {
-        AsyncImage(url: URL(string: "https://www.hackingwithswift.com/img/unwrap.png")) { phase in
-            switch phase {
-            case .empty:
-                ProgressView()
-            case .failure:
-                Image(systemName: "photo")
-            case .success(let loadedImage):
-                loadedImage
-                    .aspectRatio(contentMode: .fit)
-            @unknown default:
-                EmptyView()
-            }
-        }
+        Text("Test")
+//        AsyncImage(url: URL(string: "https://www.hackingwithswift.com/img/unwrap.png")) { phase in
+//            switch phase {
+//            case .empty:
+//                ProgressView()
+//            case .failure:
+//                Image(systemName: "photo")
+//            case .success(let loadedImage):
+//                loadedImage
+//                    .aspectRatio(contentMode: .fit)
+//            @unknown default:
+//                EmptyView()
+//            }
+//        }
     }
 }
 

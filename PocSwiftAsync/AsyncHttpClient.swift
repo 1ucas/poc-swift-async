@@ -16,9 +16,13 @@ class AsyncHttpClient {
     
     func makeCall(request: URLRequest) async -> Result<BogusResponse, Error> {
         do {
-            let (data, _) = try await URLSession.shared.data(for: request, delegate: nil)
+            let data = try await withCheckedThrowingContinuation { continuation in
+                URLSession.shared.dataTask(with: request) { data, _, _  in
+                    continuation.resume(returning: data)
+                }
+            }
             await delayCall()
-            return .success(try JSONDecoder().decode(BogusResponse.self, from: data))
+            return .success(try JSONDecoder().decode(BogusResponse.self, from: data!))
         } catch {
             return .failure(error)
         }

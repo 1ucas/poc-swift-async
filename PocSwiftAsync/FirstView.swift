@@ -14,8 +14,10 @@ struct FirstView: View {
     
     var body: some View {
         VStack {
-            ReloadableText(textToDisplay: $textToDisplay, isLoading: $isLoading)
-            ButtonList(textToDisplay: $textToDisplay, isLoading: $isLoading)
+            ReloadableText(textToDisplay: $textToDisplay,
+                           isLoading: $isLoading)
+            ButtonList(textToDisplay: $textToDisplay,
+                       isLoading: $isLoading)
             Spacer()
             StandaloneView()
         }
@@ -29,7 +31,7 @@ fileprivate struct ReloadableText: View {
     
     var body: some View {
         if(isLoading) {
-            ProgressView()
+            Text("Loading")
                 .padding()
         } else {
             Text(textToDisplay)
@@ -51,14 +53,12 @@ fileprivate struct ButtonList: View {
             Button("Network Error") {
                 loadData(with: .error)
             }
-        }.refreshable {
-            loadData(with: .failed)
         }
     }
     
     private func loadData(with driver: CustomNetworkResult) {
         isLoading = true
-        async {
+        Task {
             self.textToDisplay = await NetworkManager().retrieveStatus(with: driver)
             isLoading = false
         }
